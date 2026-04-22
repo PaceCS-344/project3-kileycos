@@ -7,6 +7,7 @@ export default function CodingPortfolio() {
     <Page>
       <h2>Coding Portfolio</h2>
       <p> I don't know what to put here </p>
+      <p> I'm testing someting </p>
 
       <div>
         {/* Project cards will go here */}
@@ -20,3 +21,5 @@ export default function CodingPortfolio() {
     </Page>
   );
 }
+
+

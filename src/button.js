@@ -1,7 +1,7 @@
-export default function Button({label}) {
+export default function Button({children}) {
   return (
     <button> 
-      {label}
+      {children}
     </button>
   );
 }

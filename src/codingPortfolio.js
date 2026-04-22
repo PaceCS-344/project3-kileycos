@@ -1,5 +1,6 @@
 import Page from "./page";
-import Button from "./button";
+//import Button from "./button";
+import CodeSection from "./codingSection";
 
 export default function CodingPortfolio() {
   return (
@@ -10,16 +11,10 @@ export default function CodingPortfolio() {
       <div>
         {/* Project cards will go here */}
         <div>
-          <h3>Project Name</h3>
-          <p> Short description of project </p>
-          <p> should put languaes and tools</p>
-          <Button label="View on GitHub" />
+          <CodeSection codesectionTitle="Riddle Me This" codesectionBody="Created a riddle game using Java, in collaboration with Alex Sullivan as a final project." codesectionLink={<a href="https://github.com/hyperbole22/TermProject_RiddleMeThis" target="_blank" rel="noopener noreferrer">View on GitHub</a>} />
         </div>
         <div>
-          <h3>Project Name</h3>
-          <p>Short description of what the project </p>
-          <p>should put languaes and tools</p>
-          <Button label="View on GitHub" />
+          <CodeSection codesectionTitle="Project 2" codesectionBody="Description of Project 2" codesectionLink={<a href="https://github.com" target="_blank" rel="noopener noreferrer">View on GitHub</a>} />
         </div>
       </div>
     </Page>

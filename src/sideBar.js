@@ -7,3 +7,4 @@ export default function SideBar() {
 }
 
 //should turn this into a drop down when page is small
+// removing this for now -> will add back later once I've figured out exaclty what I'm doing with it

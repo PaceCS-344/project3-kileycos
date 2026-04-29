@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
+import Button from "./button.js"
+import './styles.css'
 
 export default function Header() {
     return (
-        <header>
-            <h1> I don't know what to title this </h1>
+        <div className="header">
+            <h1 > This is definetly a title </h1>
             <nav>
-                <Link to = "/"> Home </Link> | {" "}
-                <Link to = "/profile"> Profile </Link> | {" "}
-                <Link to = "/art"> Art Portfolio </Link> | {" "}
-                <Link to = "/code"> Coding Portfolio </Link> | {" "}
-                <Link to = "/contact"> Contact </Link>
+                <Link to = "/"> <Button> Home </Button> </Link> {" "}
+                <Link to = "/profile"> <Button> Profile </Button> </Link> {" "}
+                <Link to = "/art"> <Button> Art Portfolio </Button> </Link> {" "}
+                <Link to = "/code"> <Button> Coding Portfolio </Button> </Link> {" "}
+                <Link to = "/contact"> <Button> Contact </Button> </Link>
             </nav>
-        </header>   
+        </div>   
     );
 }

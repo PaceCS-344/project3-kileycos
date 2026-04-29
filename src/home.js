@@ -1,12 +1,14 @@
 import Page from "./page";
 import Button from "./button";
+import './styles.css';
 
 export default function Home() {
     return (
         <Page>
-            <h2> Welcome </h2>
-            <p> i'll put an image here at some point </p>
-            <Button label = "look at stuff" />
+            <h2> Welcome to my website</h2>
+            <div className="home"> 
+
+            </div>
         </Page>
     );
 }

@@ -22,7 +22,7 @@ export default function ArtPortfolio() {
       <p className="flip-hint">Click a card to learn more</p>
       <div className="cards-grid">
         {artProjects.map(p => (
-          <Card key={p.title} title={p.title} description={p.description} imageUrl={p.imageUrl} />
+          <ContentCard key={p.title} title={p.title} description={p.description} imageUrl={p.imageUrl} />
         ))}
       </div>
     </Page>

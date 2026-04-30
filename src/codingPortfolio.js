@@ -1,22 +1,29 @@
 import Page from "./page";
-//import Button from "./button";
-import CodeSection from "./codingSection";
+import ContentCard from "./contentCard";
+
+const codingProjects = [
+  {
+    title: "Riddle Me This",
+    description: "Created a riddle game using Java, in collaboration with Alex Sullivan as a final project.",
+    href: "https://github.com/hyperbole22/TermProject_RiddleMeThis"
+  },
+  {
+    title: "Project 2",
+    description: "Description of Project 2",
+    href: "https://github.com"
+  }
+];
 
 export default function CodingPortfolio() {
   return (
     <Page>
       <h2>Coding Portfolio</h2>
-      <p> I don't know what to put here </p>
-      <p> I'm testing someting </p>
-
-      <div>
-        {/* Project cards will go here */}
-        <div>
-          <CodeSection codesectionTitle="Riddle Me This" codesectionBody="Created a riddle game using Java, in collaboration with Alex Sullivan as a final project." codesectionLink={<a href="https://github.com/hyperbole22/TermProject_RiddleMeThis" target="_blank" rel="noopener noreferrer">View on GitHub</a>} />
-        </div>
-        <div>
-          <CodeSection codesectionTitle="Project 2" codesectionBody="Description of Project 2" codesectionLink={<a href="https://github.com" target="_blank" rel="noopener noreferrer">View on GitHub</a>} />
-        </div>
+      <p>I don't know what to put here</p>
+      <p className="flip-hint">Click a card to learn more</p>
+      <div className="cards-grid">
+        {codingProjects.map(p => (
+          <ContentCard key={p.title} title={p.title} description={p.description} href={p.href} />
+        ))}
       </div>
     </Page>
   );

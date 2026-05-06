@@ -2,10 +2,17 @@ import { Link } from 'react-router-dom';
 import Button from "./button.js"
 import './styles.css'
 import {useState, useEffect } from 'react';
+import { useSearch } from './searchContext';
+import { searchIndex } from './searchIndex.js';
+import { useNavigate } from 'react-router-dom';
+
+console.log('searchIndex:', searchIndex);
 
 export default function Header() {
     const [isSticky, setIsSticky] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+    const { searchTerm, setSearchTerm, setSubmittedTerm } = useSearch();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,6 +23,21 @@ export default function Header() {
     }, []);
 
     const toggleSidebar = () => setIsOpen(prev => !prev);
+
+    const handleSearch = () => {
+        const term = searchTerm.trim().toLowerCase();
+        if (!term) return;
+
+        const match = searchIndex.find(item =>
+            item.tags.toLowerCase().includes(term) ||
+            item.title.toLowerCase().includes(term)
+        );
+
+        if (match) {
+            setSubmittedTerm(term);
+            navigate(match.route);
+        }
+    };
 
     return (
         <>
@@ -31,6 +53,9 @@ export default function Header() {
                         <div className="hamburger-btn" onClick={toggleSidebar}>
                             ☰
                         </div>
+                        <input className="search-bar" type="text" placeholder="Search..." 
+                               value={searchTerm} onChange={e => setSearchTerm(e.target.value)} 
+                               onKeyDown={e => { if (e.key === 'Enter') handleSearch(); }} />
                     </nav>
                     
                 </div>

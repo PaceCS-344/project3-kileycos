@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 .body {
-    background-color: #F2EFEA !important;
+    background-color: #F2EFEA;
     color: #31263E !important;
     font-family: Baskerville !important;
 }
@@ -248,22 +248,17 @@
     grid-template-rows: repeat(3, 1fr);
 }
 
+.home-side-grid.cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
 .home-side-grid.cols-1 .grid-img:nth-child(n+4) {
     display: none;
 }
 
-.home-side-grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
 .home-side-grid.cols-2 .grid-img:nth-child(n+7) {
     display: none;
-}
-
-.home-side-grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
 }
 
 .home-side-grid.hidden {

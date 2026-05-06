@@ -4,13 +4,14 @@ import './styles.css';
 
 export default function Page({ children }) {
   return (
-    <div className="container" className="body">
+    <div className="page">
       <Header />
-            <main>{children}</main>
-
-        <hr></hr>
-        <Footer />
-      </div>
+      <main className="main-content">
+        {children}
+      </main>
+      <hr />
+      <Footer />
+    </div>
   );
 }
 
